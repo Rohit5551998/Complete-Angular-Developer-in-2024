@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './post.component.css'
 })
 export class PostComponent {
-  @Input() postImg = "";
+  @Input('img') postImg = "";
 }
