@@ -4,6 +4,8 @@
   <p>Some Content</p>
 </app-post>
 
-<h1>Hello, {{ name.toUpperCase() }}</h1>
+<h1>Hello, {{ name | titlecase }}</h1>
 <h2>Hello, {{ getName() }}</h2>
 <h2>{{15+13}}</h2>
+
+<h2>{{ currentDate | date: 'mediumDate' }}</h2>
