@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { defaultTo, find, get } from 'lodash-es';
+import { defaultTo, filter, find, get } from 'lodash-es';
 
 interface IModal {
   id: string,
@@ -29,5 +29,9 @@ export class ModalService {
 
   register(id: string): void {
     this.modals.push({ id, visible: false });
+  }
+
+  unregister(id: string): void {
+    this.modals = filter(this.modals, (element) => element.id !== id);
   }
 }
